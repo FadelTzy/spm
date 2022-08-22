@@ -28,6 +28,10 @@ use App\Http\Controllers\JenisBelanjaController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('spmv2', [Admin::class, 'index1']);
+// Route::get('spmv2', function () {
+//     return view('welcome1');
+// });
 Route::group(['middleware' => ['auth']], function () {
     Route::prefix('admin')->group(function () {
         //Jenis Belanja

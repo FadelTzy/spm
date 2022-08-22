@@ -10,4 +10,9 @@ class Admin extends Controller
     {
         return view('admin.dashboard');
     }
+    public function index1()
+    {
+        $data['page'] = "SPM V2";
+        return view('welcome1', $data);
+    }
 }
